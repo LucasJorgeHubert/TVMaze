@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69175A4C2DB191AD0087C8E5 /* TVMazeLucasHubertApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69175A4B2DB191AD0087C8E5 /* TVMazeLucasHubertApp.swift */; };
+		69175A4E2DB191AD0087C8E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69175A4D2DB191AD0087C8E5 /* ContentView.swift */; };
+		69175A502DB191AD0087C8E5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69175A4F2DB191AD0087C8E5 /* Item.swift */; };
+		69175A522DB191AF0087C8E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69175A512DB191AF0087C8E5 /* Assets.xcassets */; };
+		69175A552DB191AF0087C8E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69175A542DB191AF0087C8E5 /* Preview Assets.xcassets */; };
+		69175A5F2DB191AF0087C8E5 /* TVMazeLucasHubertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69175A5E2DB191AF0087C8E5 /* TVMazeLucasHubertTests.swift */; };
+		69175A692DB191AF0087C8E5 /* TVMazeLucasHubertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69175A682DB191AF0087C8E5 /* TVMazeLucasHubertUITests.swift */; };
+		69175A6B2DB191AF0087C8E5 /* TVMazeLucasHubertUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69175A6A2DB191AF0087C8E5 /* TVMazeLucasHubertUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69175A5B2DB191AF0087C8E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69175A402DB191AD0087C8E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69175A472DB191AD0087C8E5;
+			remoteInfo = TVMazeLucasHubert;
+		};
+		69175A652DB191AF0087C8E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69175A402DB191AD0087C8E5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69175A472DB191AD0087C8E5;
+			remoteInfo = TVMazeLucasHubert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		69175A482DB191AD0087C8E5 /* TVMazeLucasHubert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVMazeLucasHubert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69175A4B2DB191AD0087C8E5 /* TVMazeLucasHubertApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeLucasHubertApp.swift; sourceTree = "<group>"; };
+		69175A4D2DB191AD0087C8E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		69175A4F2DB191AD0087C8E5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		69175A512DB191AF0087C8E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69175A542DB191AF0087C8E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		69175A5A2DB191AF0087C8E5 /* TVMazeLucasHubertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVMazeLucasHubertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69175A5E2DB191AF0087C8E5 /* TVMazeLucasHubertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeLucasHubertTests.swift; sourceTree = "<group>"; };
+		69175A642DB191AF0087C8E5 /* TVMazeLucasHubertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVMazeLucasHubertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69175A682DB191AF0087C8E5 /* TVMazeLucasHubertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeLucasHubertUITests.swift; sourceTree = "<group>"; };
+		69175A6A2DB191AF0087C8E5 /* TVMazeLucasHubertUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVMazeLucasHubertUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69175A452DB191AD0087C8E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69175A572DB191AF0087C8E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69175A612DB191AF0087C8E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69175A3F2DB191AD0087C8E5 = {
+			isa = PBXGroup;
+			children = (
+				69175A4A2DB191AD0087C8E5 /* TVMazeLucasHubert */,
+				69175A5D2DB191AF0087C8E5 /* TVMazeLucasHubertTests */,
+				69175A672DB191AF0087C8E5 /* TVMazeLucasHubertUITests */,
+				69175A492DB191AD0087C8E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69175A492DB191AD0087C8E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69175A482DB191AD0087C8E5 /* TVMazeLucasHubert.app */,
+				69175A5A2DB191AF0087C8E5 /* TVMazeLucasHubertTests.xctest */,
+				69175A642DB191AF0087C8E5 /* TVMazeLucasHubertUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69175A4A2DB191AD0087C8E5 /* TVMazeLucasHubert */ = {
+			isa = PBXGroup;
+			children = (
+				69175A4B2DB191AD0087C8E5 /* TVMazeLucasHubertApp.swift */,
+				69175A4D2DB191AD0087C8E5 /* ContentView.swift */,
+				69175A4F2DB191AD0087C8E5 /* Item.swift */,
+				69175A512DB191AF0087C8E5 /* Assets.xcassets */,
+				69175A532DB191AF0087C8E5 /* Preview Content */,
+			);
+			path = TVMazeLucasHubert;
+			sourceTree = "<group>";
+		};
+		69175A532DB191AF0087C8E5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				69175A542DB191AF0087C8E5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		69175A5D2DB191AF0087C8E5 /* TVMazeLucasHubertTests */ = {
+			isa = PBXGroup;
+			children = (
+				69175A5E2DB191AF0087C8E5 /* TVMazeLucasHubertTests.swift */,
+			);
+			path = TVMazeLucasHubertTests;
+			sourceTree = "<group>";
+		};
+		69175A672DB191AF0087C8E5 /* TVMazeLucasHubertUITests */ = {
+			isa = PBXGroup;
+			children = (
+				69175A682DB191AF0087C8E5 /* TVMazeLucasHubertUITests.swift */,
+				69175A6A2DB191AF0087C8E5 /* TVMazeLucasHubertUITestsLaunchTests.swift */,
+			);
+			path = TVMazeLucasHubertUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69175A472DB191AD0087C8E5 /* TVMazeLucasHubert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69175A6E2DB191AF0087C8E5 /* Build configuration list for PBXNativeTarget "TVMazeLucasHubert" */;
+			buildPhases = (
+				69175A442DB191AD0087C8E5 /* Sources */,
+				69175A452DB191AD0087C8E5 /* Frameworks */,
+				69175A462DB191AD0087C8E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TVMazeLucasHubert;
+			productName = TVMazeLucasHubert;
+			productReference = 69175A482DB191AD0087C8E5 /* TVMazeLucasHubert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69175A592DB191AF0087C8E5 /* TVMazeLucasHubertTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69175A712DB191AF0087C8E5 /* Build configuration list for PBXNativeTarget "TVMazeLucasHubertTests" */;
+			buildPhases = (
+				69175A562DB191AF0087C8E5 /* Sources */,
+				69175A572DB191AF0087C8E5 /* Frameworks */,
+				69175A582DB191AF0087C8E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69175A5C2DB191AF0087C8E5 /* PBXTargetDependency */,
+			);
+			name = TVMazeLucasHubertTests;
+			productName = TVMazeLucasHubertTests;
+			productReference = 69175A5A2DB191AF0087C8E5 /* TVMazeLucasHubertTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		69175A632DB191AF0087C8E5 /* TVMazeLucasHubertUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69175A742DB191AF0087C8E5 /* Build configuration list for PBXNativeTarget "TVMazeLucasHubertUITests" */;
+			buildPhases = (
+				69175A602DB191AF0087C8E5 /* Sources */,
+				69175A612DB191AF0087C8E5 /* Frameworks */,
+				69175A622DB191AF0087C8E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69175A662DB191AF0087C8E5 /* PBXTargetDependency */,
+			);
+			name = TVMazeLucasHubertUITests;
+			productName = TVMazeLucasHubertUITests;
+			productReference = 69175A642DB191AF0087C8E5 /* TVMazeLucasHubertUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69175A402DB191AD0087C8E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					69175A472DB191AD0087C8E5 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					69175A592DB191AF0087C8E5 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 69175A472DB191AD0087C8E5;
+					};
+					69175A632DB191AF0087C8E5 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 69175A472DB191AD0087C8E5;
+					};
+				};
+			};
+			buildConfigurationList = 69175A432DB191AD0087C8E5 /* Build configuration list for PBXProject "TVMazeLucasHubert" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69175A3F2DB191AD0087C8E5;
+			productRefGroup = 69175A492DB191AD0087C8E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69175A472DB191AD0087C8E5 /* TVMazeLucasHubert */,
+				69175A592DB191AF0087C8E5 /* TVMazeLucasHubertTests */,
+				69175A632DB191AF0087C8E5 /* TVMazeLucasHubertUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69175A462DB191AD0087C8E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69175A552DB191AF0087C8E5 /* Preview Assets.xcassets in Resources */,
+				69175A522DB191AF0087C8E5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69175A582DB191AF0087C8E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69175A622DB191AF0087C8E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69175A442DB191AD0087C8E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69175A4E2DB191AD0087C8E5 /* ContentView.swift in Sources */,
+				69175A502DB191AD0087C8E5 /* Item.swift in Sources */,
+				69175A4C2DB191AD0087C8E5 /* TVMazeLucasHubertApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69175A562DB191AF0087C8E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69175A5F2DB191AF0087C8E5 /* TVMazeLucasHubertTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69175A602DB191AF0087C8E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69175A6B2DB191AF0087C8E5 /* TVMazeLucasHubertUITestsLaunchTests.swift in Sources */,
+				69175A692DB191AF0087C8E5 /* TVMazeLucasHubertUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69175A5C2DB191AF0087C8E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69175A472DB191AD0087C8E5 /* TVMazeLucasHubert */;
+			targetProxy = 69175A5B2DB191AF0087C8E5 /* PBXContainerItemProxy */;
+		};
+		69175A662DB191AF0087C8E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69175A472DB191AD0087C8E5 /* TVMazeLucasHubert */;
+			targetProxy = 69175A652DB191AF0087C8E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		69175A6C2DB191AF0087C8E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69175A6D2DB191AF0087C8E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69175A6F2DB191AF0087C8E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TVMazeLucasHubert/Preview Content\"";
+				DEVELOPMENT_TEAM = 76WUJ9PUX7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucashubert.TVMazeLucasHubert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69175A702DB191AF0087C8E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TVMazeLucasHubert/Preview Content\"";
+				DEVELOPMENT_TEAM = 76WUJ9PUX7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucashubert.TVMazeLucasHubert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		69175A722DB191AF0087C8E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76WUJ9PUX7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucashubert.TVMazeLucasHubertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVMazeLucasHubert.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TVMazeLucasHubert";
+			};
+			name = Debug;
+		};
+		69175A732DB191AF0087C8E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76WUJ9PUX7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucashubert.TVMazeLucasHubertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TVMazeLucasHubert.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TVMazeLucasHubert";
+			};
+			name = Release;
+		};
+		69175A752DB191AF0087C8E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76WUJ9PUX7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucashubert.TVMazeLucasHubertUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TVMazeLucasHubert;
+			};
+			name = Debug;
+		};
+		69175A762DB191AF0087C8E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76WUJ9PUX7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucashubert.TVMazeLucasHubertUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TVMazeLucasHubert;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69175A432DB191AD0087C8E5 /* Build configuration list for PBXProject "TVMazeLucasHubert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69175A6C2DB191AF0087C8E5 /* Debug */,
+				69175A6D2DB191AF0087C8E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69175A6E2DB191AF0087C8E5 /* Build configuration list for PBXNativeTarget "TVMazeLucasHubert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69175A6F2DB191AF0087C8E5 /* Debug */,
+				69175A702DB191AF0087C8E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69175A712DB191AF0087C8E5 /* Build configuration list for PBXNativeTarget "TVMazeLucasHubertTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69175A722DB191AF0087C8E5 /* Debug */,
+				69175A732DB191AF0087C8E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69175A742DB191AF0087C8E5 /* Build configuration list for PBXNativeTarget "TVMazeLucasHubertUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69175A752DB191AF0087C8E5 /* Debug */,
+				69175A762DB191AF0087C8E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69175A402DB191AD0087C8E5 /* Project object */;
+}

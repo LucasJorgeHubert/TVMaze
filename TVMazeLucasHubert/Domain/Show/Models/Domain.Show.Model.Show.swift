@@ -18,14 +18,14 @@ extension Domain.Show.Model {
         let premiered, ended: String?
         let officialSite: String?
         let schedule: Schedule
-        let rating: Rating
+        let rating: ShowRating
         let weight: Int
         let network: Network?
         let externals: Externals
         let image: ShowImage
         let summary: String
         let updated: Int
-        let links: Links?
+        let links: ShowLinks?
         
         enum CodingKeys: String, CodingKey {
             case id
@@ -62,6 +62,29 @@ extension Domain.Show.Model {
             dateFormatter.dateFormat = "yyyy-MM-dd"
             return dateFormatter.date(from: ended ?? "") ?? Date()
         }
+        
+        public static func mockShow() -> Show {
+            return Show(id: 1,
+                        url: "https://www.tvmaze.com/shows/1/stranger-things",
+                        name: "Stranger Things",
+                        type: "Scripted",
+                        language: "English",
+                        genres: ["Drama", "Sci-Fi", "Thriller"],
+                        status: "Ended",
+                        runtime: 51,
+                        averageRuntime: 51,
+                        premiered: "2016-07-15",
+                        ended: "2019-06-15",
+                        officialSite: "https://www.hbo.com/stranger-things",
+                        schedule: Schedule(time: "21:00", days: ["Thursday"]),
+                        rating: ShowRating(average: 8.9),
+                        weight: 95,
+                        network: Network(id: 2, name: "HBO", country: ShowCountry(name: "United States", code: "US", timezone: "America/New_York"), officialSite: "https://www.hbo.com/"),
+                        externals: Externals(tvrage: 236, thetvdb: 121361, imdb: "tt4574334"),  image: ShowImage(medium: "https://static.tvmaze.com/uploads/images/medium_portrait/81/203824.jpg", original: "https://static.tvmaze.com/uploads/images/original_untouched/81/203824.jpg"),
+                        summary: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
+                        updated: 1616000000,
+                        links: ShowLinks(linksSelf: SelfLinkShow(href: "https://api.tvmaze.com/shows/1"), previousepisode: PreviousEpisode(href: "https://api.tvmaze.com/episodes/185", name: "The Duff")))
+        }
 
     }
     
@@ -77,7 +100,7 @@ extension Domain.Show.Model {
     }
     
     // MARK: - Links
-    struct Links: Codable, Hashable {
+    struct ShowLinks: Codable, Hashable {
         let linksSelf: SelfLinkShow
         let previousepisode: PreviousEpisode?
         
@@ -102,17 +125,17 @@ extension Domain.Show.Model {
     struct Network: Codable, Hashable {
         let id: Int
         let name: String
-        let country: Country?
+        let country: ShowCountry?
         let officialSite: String?
     }
     
     // MARK: - Country
-    struct Country: Codable, Hashable {
+    struct ShowCountry: Codable, Hashable {
         let name, code, timezone: String
     }
     
     // MARK: - Rating
-    struct Rating: Codable, Hashable {
+    struct ShowRating: Codable, Hashable {
         let average: Double?
     }
     

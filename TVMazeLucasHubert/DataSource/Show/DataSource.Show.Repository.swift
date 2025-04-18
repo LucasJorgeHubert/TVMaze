@@ -24,5 +24,13 @@ extension DataSource.Show {
         public func getShowsByName(search: String) async throws -> [Domain.Show.Model.Show] {
             return try await dispatcher.request(apiRouter: router.getShowsByName(search: search))
         }
+        
+        public func getEpisodes(showId: Int) async throws -> [Domain.Show.Model.Episode] {
+            return try await dispatcher.request(apiRouter: router.getEpisodes(showId: showId))
+        }
+        
+        public func getCast(showId: Int) async throws -> [Domain.Show.Model.Cast] {
+            return try await dispatcher.request(apiRouter: router.getCast(showId: showId))
+        }
     }
 }

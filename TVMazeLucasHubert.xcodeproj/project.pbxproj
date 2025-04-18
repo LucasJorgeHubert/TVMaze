@@ -44,6 +44,13 @@
 		695E27922DB2ED450082DFDA /* Presenter.Show.Screens.ListShows.Components.Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27912DB2ED450082DFDA /* Presenter.Show.Screens.ListShows.Components.Genres.swift */; };
 		695E27952DB2FE050082DFDA /* Presenter.Show.Screens.ShowDetail.Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27942DB2FE050082DFDA /* Presenter.Show.Screens.ShowDetail.Screen.swift */; };
 		695E27972DB301230082DFDA /* Presenter.Show.Screens.ShowDetail.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27962DB301230082DFDA /* Presenter.Show.Screens.ShowDetail.ViewModel.swift */; };
+		695E27992DB302980082DFDA /* Presenter.Show.Screens.ShowDetail.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27982DB302980082DFDA /* Presenter.Show.Screens.ShowDetail.DI.swift */; };
+		695E279B2DB302E60082DFDA /* Domain.Show.UseCase.GetEpisodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E279A2DB302E60082DFDA /* Domain.Show.UseCase.GetEpisodes.swift */; };
+		695E279D2DB303220082DFDA /* Domain.Show.Model.Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E279C2DB303220082DFDA /* Domain.Show.Model.Episode.swift */; };
+		695E279F2DB304570082DFDA /* episodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 695E279E2DB304570082DFDA /* episodes.json */; };
+		695E27A12DB305C90082DFDA /* cast.json in Resources */ = {isa = PBXBuildFile; fileRef = 695E27A02DB305C90082DFDA /* cast.json */; };
+		695E27A32DB305EC0082DFDA /* Domain.Show.Model.Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27A22DB305EC0082DFDA /* Domain.Show.Model.Cast.swift */; };
+		695E27A52DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27A42DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +112,13 @@
 		695E27912DB2ED450082DFDA /* Presenter.Show.Screens.ListShows.Components.Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ListShows.Components.Genres.swift; sourceTree = "<group>"; };
 		695E27942DB2FE050082DFDA /* Presenter.Show.Screens.ShowDetail.Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ShowDetail.Screen.swift; sourceTree = "<group>"; };
 		695E27962DB301230082DFDA /* Presenter.Show.Screens.ShowDetail.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ShowDetail.ViewModel.swift; sourceTree = "<group>"; };
+		695E27982DB302980082DFDA /* Presenter.Show.Screens.ShowDetail.DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ShowDetail.DI.swift; sourceTree = "<group>"; };
+		695E279A2DB302E60082DFDA /* Domain.Show.UseCase.GetEpisodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.UseCase.GetEpisodes.swift; sourceTree = "<group>"; };
+		695E279C2DB303220082DFDA /* Domain.Show.Model.Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.Model.Episode.swift; sourceTree = "<group>"; };
+		695E279E2DB304570082DFDA /* episodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = episodes.json; sourceTree = "<group>"; };
+		695E27A02DB305C90082DFDA /* cast.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cast.json; sourceTree = "<group>"; };
+		695E27A22DB305EC0082DFDA /* Domain.Show.Model.Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.Model.Cast.swift; sourceTree = "<group>"; };
+		695E27A42DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.UseCase.GetCast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				69175A7C2DB19D950087C8E5 /* Domain.Show.Model.Show.swift */,
+				695E27A22DB305EC0082DFDA /* Domain.Show.Model.Cast.swift */,
+				695E279C2DB303220082DFDA /* Domain.Show.Model.Episode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -283,6 +299,8 @@
 			children = (
 				69175A952DB1EF260087C8E5 /* Domain.Show.UseCase.GetShows.swift */,
 				69175A992DB1EF4E0087C8E5 /* Domain.Show.UseCase.GetShowByName.swift */,
+				695E279A2DB302E60082DFDA /* Domain.Show.UseCase.GetEpisodes.swift */,
+				695E27A42DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -338,6 +356,8 @@
 			children = (
 				69175AB02DB20FB20087C8E5 /* DataSource.DispatcherMock.swift */,
 				69175AB22DB2100E0087C8E5 /* shows_page_1.json */,
+				695E279E2DB304570082DFDA /* episodes.json */,
+				695E27A02DB305C90082DFDA /* cast.json */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -375,6 +395,7 @@
 			children = (
 				695E27942DB2FE050082DFDA /* Presenter.Show.Screens.ShowDetail.Screen.swift */,
 				695E27962DB301230082DFDA /* Presenter.Show.Screens.ShowDetail.ViewModel.swift */,
+				695E27982DB302980082DFDA /* Presenter.Show.Screens.ShowDetail.DI.swift */,
 			);
 			path = ShowDetail;
 			sourceTree = "<group>";
@@ -485,7 +506,9 @@
 			files = (
 				69175A552DB191AF0087C8E5 /* Preview Assets.xcassets in Resources */,
 				69175AB32DB2100E0087C8E5 /* shows_page_1.json in Resources */,
+				695E279F2DB304570082DFDA /* episodes.json in Resources */,
 				69175A522DB191AF0087C8E5 /* Assets.xcassets in Resources */,
+				695E27A12DB305C90082DFDA /* cast.json in Resources */,
 				69175A912DB1A2080087C8E5 /* Debug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +534,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695E27A32DB305EC0082DFDA /* Domain.Show.Model.Cast.swift in Sources */,
 				69175A8C2DB1A0B50087C8E5 /* DataSource.Protocol.APIRouter.swift in Sources */,
 				69175AA42DB1F4700087C8E5 /* Preview.extension.swift in Sources */,
 				69175A812DB19F390087C8E5 /* DataSource.swift in Sources */,
@@ -519,12 +543,16 @@
 				69175A962DB1EF260087C8E5 /* Domain.Show.UseCase.GetShows.swift in Sources */,
 				695E27972DB301230082DFDA /* Presenter.Show.Screens.ShowDetail.ViewModel.swift in Sources */,
 				69175AAE2DB205490087C8E5 /* Presenter.Show.Screens.ListShows.DI.swift in Sources */,
+				695E279B2DB302E60082DFDA /* Domain.Show.UseCase.GetEpisodes.swift in Sources */,
+				695E27A52DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift in Sources */,
 				695E27922DB2ED450082DFDA /* Presenter.Show.Screens.ListShows.Components.Genres.swift in Sources */,
 				695E278E2DB2EC740082DFDA /* Presenter.Show.Screens.ListShows.Components.ShowDetails.swift in Sources */,
 				69175A7D2DB19D950087C8E5 /* Domain.Show.Model.Show.swift in Sources */,
 				69175A882DB19FB60087C8E5 /* Domain.Show.Protocol.Repository.swift in Sources */,
 				69175A7F2DB19DA40087C8E5 /* Domain.swift in Sources */,
+				695E279D2DB303220082DFDA /* Domain.Show.Model.Episode.swift in Sources */,
 				69175A4E2DB191AD0087C8E5 /* ContentView.swift in Sources */,
+				695E27992DB302980082DFDA /* Presenter.Show.Screens.ShowDetail.DI.swift in Sources */,
 				69175AA12DB1F1400087C8E5 /* Presenter.TabBar.Screen.swift in Sources */,
 				69175AAB2DB1F5480087C8E5 /* Presenter.Show.Screens.ListShows.ViewModel.swift in Sources */,
 				695E278C2DB2E7280082DFDA /* Presenter.Show.Screens.ListShows.Components.ImageShow.swift in Sources */,

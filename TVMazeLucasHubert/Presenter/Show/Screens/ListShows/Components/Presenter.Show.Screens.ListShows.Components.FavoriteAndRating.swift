@@ -10,6 +10,7 @@ import SwiftData
 
 extension Presenter.Show.Screens.ListShows.Components {
     struct FavoriteAndRating: View {
+        @Environment(\.modelContext) private var modelContext
         @ObservedObject var viewModel: Presenter.Show.Screens.ListShows.ViewModel
         @Query var favorites: [Domain.Favorite.Model.FavoriteItem]
         var show: Domain.Show.Model.Show
@@ -20,9 +21,9 @@ extension Presenter.Show.Screens.ListShows.Components {
                     Task {
                         do {
                             if viewModel.isFavorite(show, favorites: favorites) {
-                                try viewModel.removeFromFavorite(show)
+                                try viewModel.removeFromFavorite(show, context: modelContext)
                             } else {
-                                try viewModel.addToFavorite(show)
+                                try viewModel.addToFavorite(show, context: modelContext)
                             }
                         } catch {
                             print(error)

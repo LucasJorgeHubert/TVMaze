@@ -42,9 +42,6 @@
 		695E278E2DB2EC740082DFDA /* Presenter.Show.Screens.ListShows.Components.ShowDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E278D2DB2EC740082DFDA /* Presenter.Show.Screens.ListShows.Components.ShowDetails.swift */; };
 		695E27902DB2EC9F0082DFDA /* Presenter.Show.Screens.ListShows.Components.FavoriteAndRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E278F2DB2EC9F0082DFDA /* Presenter.Show.Screens.ListShows.Components.FavoriteAndRating.swift */; };
 		695E27922DB2ED450082DFDA /* Presenter.Show.Screens.ListShows.Components.Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27912DB2ED450082DFDA /* Presenter.Show.Screens.ListShows.Components.Genres.swift */; };
-		695E27952DB2FE050082DFDA /* Presenter.Show.Screens.ShowDetail.Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27942DB2FE050082DFDA /* Presenter.Show.Screens.ShowDetail.Screen.swift */; };
-		695E27972DB301230082DFDA /* Presenter.Show.Screens.ShowDetail.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27962DB301230082DFDA /* Presenter.Show.Screens.ShowDetail.ViewModel.swift */; };
-		695E27992DB302980082DFDA /* Presenter.Show.Screens.ShowDetail.DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27982DB302980082DFDA /* Presenter.Show.Screens.ShowDetail.DI.swift */; };
 		695E279B2DB302E60082DFDA /* Domain.Show.UseCase.GetEpisodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E279A2DB302E60082DFDA /* Domain.Show.UseCase.GetEpisodes.swift */; };
 		695E279D2DB303220082DFDA /* Domain.Show.Model.Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E279C2DB303220082DFDA /* Domain.Show.Model.Episode.swift */; };
 		695E279F2DB304570082DFDA /* episodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 695E279E2DB304570082DFDA /* episodes.json */; };
@@ -52,6 +49,7 @@
 		695E27A32DB305EC0082DFDA /* Domain.Show.Model.Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27A22DB305EC0082DFDA /* Domain.Show.Model.Cast.swift */; };
 		695E27A52DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27A42DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift */; };
 		695E27A82DB318D90082DFDA /* Presenter.Helper.HTMLText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27A72DB318D90082DFDA /* Presenter.Helper.HTMLText.swift */; };
+		69F03FAB2DB40D94009AF169 /* Presenter.Show.Screens.ListShows.Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F03FAA2DB40D94009AF169 /* Presenter.Show.Screens.ListShows.Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,9 +109,6 @@
 		695E278D2DB2EC740082DFDA /* Presenter.Show.Screens.ListShows.Components.ShowDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ListShows.Components.ShowDetails.swift; sourceTree = "<group>"; };
 		695E278F2DB2EC9F0082DFDA /* Presenter.Show.Screens.ListShows.Components.FavoriteAndRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ListShows.Components.FavoriteAndRating.swift; sourceTree = "<group>"; };
 		695E27912DB2ED450082DFDA /* Presenter.Show.Screens.ListShows.Components.Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ListShows.Components.Genres.swift; sourceTree = "<group>"; };
-		695E27942DB2FE050082DFDA /* Presenter.Show.Screens.ShowDetail.Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ShowDetail.Screen.swift; sourceTree = "<group>"; };
-		695E27962DB301230082DFDA /* Presenter.Show.Screens.ShowDetail.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ShowDetail.ViewModel.swift; sourceTree = "<group>"; };
-		695E27982DB302980082DFDA /* Presenter.Show.Screens.ShowDetail.DI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ShowDetail.DI.swift; sourceTree = "<group>"; };
 		695E279A2DB302E60082DFDA /* Domain.Show.UseCase.GetEpisodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.UseCase.GetEpisodes.swift; sourceTree = "<group>"; };
 		695E279C2DB303220082DFDA /* Domain.Show.Model.Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.Model.Episode.swift; sourceTree = "<group>"; };
 		695E279E2DB304570082DFDA /* episodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = episodes.json; sourceTree = "<group>"; };
@@ -121,6 +116,7 @@
 		695E27A22DB305EC0082DFDA /* Domain.Show.Model.Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.Model.Cast.swift; sourceTree = "<group>"; };
 		695E27A42DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.UseCase.GetCast.swift; sourceTree = "<group>"; };
 		695E27A72DB318D90082DFDA /* Presenter.Helper.HTMLText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Helper.HTMLText.swift; sourceTree = "<group>"; };
+		69F03FAA2DB40D94009AF169 /* Presenter.Show.Screens.ListShows.Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ListShows.Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,7 +333,6 @@
 		69175AA72DB1F4EA0087C8E5 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				695E27932DB2FDA70082DFDA /* ShowDetail */,
 				695E27852DB2B3290082DFDA /* Favorites */,
 				69175AAC2DB205290087C8E5 /* ListShows */,
 			);
@@ -349,6 +344,7 @@
 			children = (
 				695E278A2DB2E69B0082DFDA /* Components */,
 				69175AA82DB1F52B0087C8E5 /* Presenter.Show.Screens.ListShows.Screen.swift */,
+				69F03FAA2DB40D94009AF169 /* Presenter.Show.Screens.ListShows.Factory.swift */,
 				69175AAA2DB1F5480087C8E5 /* Presenter.Show.Screens.ListShows.ViewModel.swift */,
 			);
 			path = ListShows;
@@ -391,16 +387,6 @@
 				695E278F2DB2EC9F0082DFDA /* Presenter.Show.Screens.ListShows.Components.FavoriteAndRating.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		695E27932DB2FDA70082DFDA /* ShowDetail */ = {
-			isa = PBXGroup;
-			children = (
-				695E27942DB2FE050082DFDA /* Presenter.Show.Screens.ShowDetail.Screen.swift */,
-				695E27962DB301230082DFDA /* Presenter.Show.Screens.ShowDetail.ViewModel.swift */,
-				695E27982DB302980082DFDA /* Presenter.Show.Screens.ShowDetail.DI.swift */,
-			);
-			path = ShowDetail;
 			sourceTree = "<group>";
 		};
 		695E27A62DB318C10082DFDA /* Helpers */ = {
@@ -550,9 +536,9 @@
 				69175AA42DB1F4700087C8E5 /* Preview.extension.swift in Sources */,
 				69175A812DB19F390087C8E5 /* DataSource.swift in Sources */,
 				695E27892DB2D5520082DFDA /* Presenter.Show.Screen.Favorites.Screen.swift in Sources */,
+				69F03FAB2DB40D94009AF169 /* Presenter.Show.Screens.ListShows.Factory.swift in Sources */,
 				69175A832DB19F800087C8E5 /* DataSource.Show.APIRouter.swift in Sources */,
 				69175A962DB1EF260087C8E5 /* Domain.Show.UseCase.GetShows.swift in Sources */,
-				695E27972DB301230082DFDA /* Presenter.Show.Screens.ShowDetail.ViewModel.swift in Sources */,
 				695E279B2DB302E60082DFDA /* Domain.Show.UseCase.GetEpisodes.swift in Sources */,
 				695E27A52DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift in Sources */,
 				695E27922DB2ED450082DFDA /* Presenter.Show.Screens.ListShows.Components.Genres.swift in Sources */,
@@ -563,7 +549,6 @@
 				69175A7F2DB19DA40087C8E5 /* Domain.swift in Sources */,
 				695E279D2DB303220082DFDA /* Domain.Show.Model.Episode.swift in Sources */,
 				69175A4E2DB191AD0087C8E5 /* ContentView.swift in Sources */,
-				695E27992DB302980082DFDA /* Presenter.Show.Screens.ShowDetail.DI.swift in Sources */,
 				69175AA12DB1F1400087C8E5 /* Presenter.TabBar.Screen.swift in Sources */,
 				69175AAB2DB1F5480087C8E5 /* Presenter.Show.Screens.ListShows.ViewModel.swift in Sources */,
 				695E278C2DB2E7280082DFDA /* Presenter.Show.Screens.ListShows.Components.ImageShow.swift in Sources */,
@@ -574,7 +559,6 @@
 				692A54C62DB32CA70076A31F /* Presenter.Show.DependencyInjector.swift in Sources */,
 				69175AB12DB20FB20087C8E5 /* DataSource.DispatcherMock.swift in Sources */,
 				69175AA92DB1F52B0087C8E5 /* Presenter.Show.Screens.ListShows.Screen.swift in Sources */,
-				695E27952DB2FE050082DFDA /* Presenter.Show.Screens.ShowDetail.Screen.swift in Sources */,
 				695E27902DB2EC9F0082DFDA /* Presenter.Show.Screens.ListShows.Components.FavoriteAndRating.swift in Sources */,
 				69175A932DB1A2AC0087C8E5 /* DataSource.Environment.swift in Sources */,
 				695E27832DB2B0840082DFDA /* Domain.Favorites.Model.Favorite.swift in Sources */,

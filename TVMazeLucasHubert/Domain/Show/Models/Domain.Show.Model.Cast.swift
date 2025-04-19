@@ -27,10 +27,10 @@ extension Domain.Show.Model {
         public let url: String
         public let name: String
         public let country: Country
-        public let birthday: String
+        public let birthday: String?
         public let deathday: String?
         public let gender: String
-        public let image: CastImage
+        public let image: CastImage?
         public let updated: Int
         public let _links: LinksCast
     }
@@ -56,8 +56,8 @@ extension Domain.Show.Model {
         public let id: Int
         public let url: String
         public let name: String
-        public let image: CastImage
-        public let _links: Links
+        public let image: CastImage?
+        public let _links: Links?
     }
     
     public struct Country: Codable, Hashable {

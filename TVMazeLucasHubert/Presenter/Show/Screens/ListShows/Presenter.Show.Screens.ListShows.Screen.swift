@@ -10,8 +10,23 @@ import Combine
 import SwiftData
 
 extension Presenter.Show.Screens.ListShows {
+    
+    struct ScreenWrapper: View {
+        @EnvironmentObject var injector: Presenter.Show.DependencyInjector
+        
+        var body: some View {
+            Screen(viewModel:
+                    .init(
+                        getShowUseCase: injector.getShowUseCase,
+                        getShowBySearchUseCase: injector.getShowBySearchUseCase,
+                        context: injector.context
+                    )
+            )
+        }
+    }
+    
     struct Screen: View {
-        @ObservedObject var viewModel: Presenter.Show.Screens.ListShows.ViewModel
+        @StateObject var viewModel: Presenter.Show.Screens.ListShows.ViewModel
         @State var showSearch: Bool = false
         @Query var favorites: [Domain.Favorite.Model.FavoriteItem]
         
@@ -21,21 +36,24 @@ extension Presenter.Show.Screens.ListShows {
                     ProgressView()
                 } else {
                     List(viewModel.shows, id: \.id) { show in
-                        HStack {
-                            Presenter.Show.Screens.ListShows.Components.ImageShow(show: show)
-                            
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text(show.name)
-                                    .font(.title2)
+                        NavigationLink(
+                            destination: Presenter.Show.Screens.ShowDetails.ScreenWrapper(show: show)) {
+                            HStack {
+                                Presenter.Show.Screens.ListShows.Components.ImageShow(show: show)
                                 
-                                Presenter.Show.Screens.ListShows.Components.Genres(viewModel: viewModel, show: show)
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text(show.name)
+                                        .font(.title2)
+                                    
+                                    Presenter.Show.Screens.ListShows.Components.Genres(viewModel: viewModel, show: show)
+                                    
+                                    Spacer()
+                                    
+                                    Presenter.Show.Screens.ListShows.Components.ShowDetails(show: show)
+                                }
                                 
-                                Spacer()
-                                
-                                Presenter.Show.Screens.ListShows.Components.ShowDetails(show: show)
+                                Presenter.Show.Screens.ListShows.Components.FavoriteAndRating(viewModel: viewModel, show: show)
                             }
-                            
-                            Presenter.Show.Screens.ListShows.Components.FavoriteAndRating(viewModel: viewModel, show: show)
                         }
                     }
                     .searchable(text: $viewModel.searchTerm, isPresented: $showSearch, placement: .navigationBarDrawer, prompt: "Search Show")
@@ -67,13 +85,8 @@ extension Presenter.Show.Screens.ListShows {
 }
 
 #Preview {
-    let container = try! ModelContainer(for: Domain.Favorite.Model.FavoriteItem.self, configurations: ModelConfiguration(isStoredInMemoryOnly: true))
-    let context = container.mainContext
-    
     return PreviewWrapper {
-        Presenter.Show.Screens.ListShows.Screen(
-            viewModel: Presenter.Show.Screens.ListShows.DI().makeViewModel(context: context)
-        )
+        Presenter.Show.Screens.ListShows.ScreenWrapper()
     }
 }
 

@@ -18,4 +18,5 @@ public enum Presenter {
             public enum ShowDetails { }
         }
     }
+    public enum Helpers { }
 }

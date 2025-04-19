@@ -11,9 +11,9 @@ import SwiftData
 extension Presenter.Show.Screens.ShowDetails {
     class ViewModel: ObservableObject {
         @Published var show: Domain.Show.Model.Show
-        @Published var episodes: [Domain.Show.Model.Episode] = []
+        @Published var episodes: [Int: [Domain.Show.Model.Episode]] = [:]
         @Published var cast: [Domain.Show.Model.Cast] = []
-        @Published var loading: Bool = false
+        @Published var loading: Bool = true
         
         let getEpisodesUseCase: Domain.Show.UseCase.GetEpisodes
         let getCastUseCase: Domain.Show.UseCase.GetCast
@@ -32,12 +32,15 @@ extension Presenter.Show.Screens.ShowDetails {
             self.context = context
         }
         
+        @MainActor
         func getEpisodes() async throws {
             loading = true
-            self.episodes = try await getEpisodesUseCase.execute(showId: show.id)
+            let episodes = try await getEpisodesUseCase.execute(showId: show.id)
+            self.episodes = Dictionary(grouping: episodes, by: { $0.season })
             loading = false
         }
         
+        @MainActor
         func getCast() async throws {
             loading = true
             self.cast = try await getCastUseCase.execute(showId: show.id)

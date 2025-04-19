@@ -22,7 +22,7 @@ extension Domain.Show.Model {
         public let rating: Rating?
         public let image: EspisodeImage
         public let summary: String
-        public let links: Links
+        public let _links: Links
     }
     
     public struct Rating: Codable, Hashable {
@@ -36,11 +36,9 @@ extension Domain.Show.Model {
     
     public struct Links: Codable, Hashable {
         public let selfLink: SelfLink
-        public let showLink: ShowLink
         
         enum CodingKeys: String, CodingKey {
             case selfLink = "self"
-            case showLink = "show"
         }
     }
     

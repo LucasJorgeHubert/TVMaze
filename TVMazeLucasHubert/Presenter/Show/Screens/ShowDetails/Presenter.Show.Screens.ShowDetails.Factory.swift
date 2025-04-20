@@ -14,9 +14,11 @@ extension Presenter.Show.Screens.ShowDetails {
             let dispather = DataSource.DispatcherMock()
             let repository = DataSource.Show.Repository(dispatcher: dispather)
             let getEpisodeUseCase = Domain.Show.UseCase.GetEpisodes(repository: repository)
+            let getCastUseCase = Domain.Show.UseCase.GetCast(repository: repository)
             
             return Presenter.Show.Screens.ShowDetails.ViewModel(
                 getEpisodeUseCase: getEpisodeUseCase,
+                getCastUseCase: getCastUseCase,
                 show: show
             )
         }

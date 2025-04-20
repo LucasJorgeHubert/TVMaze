@@ -71,8 +71,47 @@ extension Presenter.Show.Screens.ShowDetails {
                             showSheet.toggle()
                         }
                         
+                        Text("Cast")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         
-                        
+                        ScrollView(.horizontal) {
+                            HStack {
+                                ForEach(viewModel.cast, id: \.id) { cast in
+                                    GroupBox{
+                                        VStack {
+                                            if let image = cast.person.image {
+                                                AsyncImage(url: URL(string: image.medium)) { phase in
+                                                    switch phase {
+                                                        case .empty:
+                                                            ProgressView()
+                                                        case .success(let image):
+                                                            image
+                                                                .resizable()
+                                                                .scaledToFit()
+                                                                .frame(maxWidth: 150, maxHeight: 150)
+                                                                .cornerRadius(8)
+                                                        case .failure:
+                                                            Image(systemName: "photo.fill")
+                                                                .resizable()
+                                                                .scaledToFit()
+                                                                .frame(maxWidth: .infinity)
+                                                                .foregroundColor(.gray)
+                                                        @unknown default:
+                                                            EmptyView()
+                                                    }
+                                                }
+                                            }
+                                            
+                                            Text(cast.person.name)
+                                                .font(.subheadline)
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .frame(maxWidth: .infinity)
                     }
                     .padding()
                 }

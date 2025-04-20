@@ -8,7 +8,8 @@
 import Foundation
 
 extension Domain.Show.Model {
-    public struct Cast: Codable, Hashable {
+    public struct Cast: Codable, Hashable, Identifiable {
+        public let id = UUID()
         public let person: Person
         public let character: CastCharacter
         public let voice: Bool

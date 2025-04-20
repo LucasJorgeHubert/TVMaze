@@ -19,56 +19,75 @@ extension Presenter.Show.Screens.ListShows {
         
         var body: some View {
             NavigationStack {
-                if viewModel.isLoading {
-                    ProgressView()
-                } else {
-                    ScrollView {
-                        LazyVStack {
-                            ForEach(viewModel.shows, id: \.id) { show in
-                                GroupBox {
-                                    HStack {
-                                        Presenter.Show.Screens.ListShows.Components.ImageShow(show: show)
+                ScrollView {
+                    LazyVStack {
+                        ForEach(viewModel.shows, id: \.id) { show in
+                            GroupBox {
+                                HStack {
+                                    Presenter.Show.Screens.ListShows.Components.ImageShow(show: show)
+                                    
+                                    VStack(alignment: .leading, spacing: 8) {
+                                        Text(show.name)
+                                            .font(.title2)
                                         
-                                        VStack(alignment: .leading, spacing: 8) {
-                                            Text(show.name)
-                                                .font(.title2)
-                                            
-                                            Presenter.Show.Screens.ListShows.Components.Genres(viewModel: viewModel, show: show)
-                                                .padding(.bottom, 4)
-                                            
-                                            Presenter.Show.Screens.ListShows.Components.ShowDetails(show: show)
-                                        }
+                                        Presenter.Show.Screens.ListShows.Components.Genres(viewModel: viewModel, show: show)
+                                            .padding(.bottom, 4)
                                         
-                                        Presenter.Show.Screens.ListShows.Components.FavoriteAndRating(viewModel: viewModel, show: show)
+                                        Presenter.Show.Screens.ListShows.Components.ShowDetails(show: show)
                                     }
-                                    .padding(.vertical, 4)
+                                    
+                                    Presenter.Show.Screens.ListShows.Components.FavoriteAndRating(viewModel: viewModel, show: show)
                                 }
-                                .padding(.horizontal)
                                 .padding(.vertical, 4)
-                                .onTapGesture {
-                                    selectedShow = show
-                                    isDetailViewPresented = true
+                            }
+                            .onAppear() {
+                                if show.id == viewModel.shows.last?.id {
+                                    Task {
+                                        do {
+                                            viewModel.pageNumber += 1
+                                            try await viewModel.getShows()
+                                        } catch {
+                                            print("error: \(error)")
+                                        }
+                                    }
                                 }
                             }
-                        }
-                    }
-                    .searchable(text: $viewModel.searchTerm, isPresented: $showSearch, placement: .navigationBarDrawer, prompt: "Search Show")
-                    .searchPresentationToolbarBehavior(.avoidHidingContent)
-                    .navigationTitle("Shows")
-                    .navigationBarTitleDisplayMode(.automatic)
-                    .toolbar {
-                        ToolbarItem {
-                            Button {
-                                showSearch.toggle()
-                            } label: {
-                                Image(systemName: "magnifyingglass")
+                            .padding(.horizontal)
+                            .padding(.vertical, 4)
+                            .onTapGesture {
+                                selectedShow = show
+                                isDetailViewPresented = true
                             }
                         }
                     }
-                    .navigationDestination(isPresented: $isDetailViewPresented) {
-                        if let show = selectedShow {
-                            Presenter.Show.Screens.ListShows.TVShowDetailView(tvShow: show)
+                    if viewModel.isLoading {
+                        ProgressView()
+                    }
+                }
+                .searchable(text: $viewModel.searchTerm, isPresented: $showSearch, placement: .navigationBarDrawer, prompt: "Search Show")
+                .searchPresentationToolbarBehavior(.avoidHidingContent)
+                .navigationTitle("Shows")
+                .navigationBarTitleDisplayMode(.automatic)
+                .toolbar {
+                    ToolbarItem {
+                        Button {
+                            //
+                        } label: {
+                            
+                            Image(systemName: "slider.horizontal.3")
                         }
+                    }
+                    ToolbarItem {
+                        Button {
+                            showSearch.toggle()
+                        } label: {
+                            Image(systemName: "magnifyingglass")
+                        }
+                    }
+                }
+                .navigationDestination(isPresented: $isDetailViewPresented) {
+                    if let show = selectedShow {
+                        Presenter.Show.Screens.ListShows.TVShowDetailView(tvShow: show)
                     }
                 }
             }
@@ -135,7 +154,6 @@ extension Presenter.Show.Screens.ListShows {
                 }
                 .navigationTitle(tvShow.name)
                 .navigationBarTitleDisplayMode(.large)
-                .toolbar(.hidden, for: .tabBar)
             }
         }
     }

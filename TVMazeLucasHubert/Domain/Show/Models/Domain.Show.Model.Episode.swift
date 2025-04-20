@@ -23,6 +23,12 @@ extension Domain.Show.Model {
         public let image: EspisodeImage
         public let summary: String
         public let _links: Links
+        
+        public func getAirdate() -> Date? {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            return dateFormatter.date(from: airdate) ?? nil
+        }
     }
     
     public struct Rating: Codable, Hashable {

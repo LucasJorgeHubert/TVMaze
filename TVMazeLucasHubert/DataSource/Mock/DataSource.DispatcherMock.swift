@@ -37,6 +37,8 @@ extension DataSource {
                         return "episodes"
                     case .getCast:
                         return "cast"
+                    case .getShowById:
+                        return "Show"
                 }
             }
             return ""

@@ -32,5 +32,9 @@ extension DataSource.Show {
         public func getCast(showId: Int) async throws -> [Domain.Show.Model.Cast] {
             return try await dispatcher.request(apiRouter: router.getCast(showId: showId))
         }
+        
+        public func getShowById(id: Int) async throws -> Domain.Show.Model.Show {
+            return try await dispatcher.request(apiRouter: router.getShowById(id: id))
+        }
     }
 }

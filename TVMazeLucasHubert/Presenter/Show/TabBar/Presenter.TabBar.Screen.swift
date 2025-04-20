@@ -17,9 +17,7 @@ extension Presenter.Show.TabBar {
                 Presenter.Show.Screens.ListShows.Screen(viewModel: Presenter.Show.Screens.ListShows.Factory.makeViewModel())
                 .tabItem { Image(systemName: "list.dash") }
                 
-                GroupBox {
-                    Text("Favorites")
-                }
+                Presenter.Show.Screens.Favorites.Screen(viewModel: Presenter.Show.Screens.Favorites.Factory.makeViewModel())
                 .tabItem { Image(systemName: "star") }
             }
             .onAppear {

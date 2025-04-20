@@ -11,6 +11,7 @@ extension DataSource.Show {
     public enum APIRouter: APIRouterProtocol {
         case getShows(page: Int)
         case getShowsByName(search: String)
+        case getShowById(id: Int)
         case getEpisodes(showId: Int)
         case getCast(showId: Int)
         
@@ -24,12 +25,14 @@ extension DataSource.Show {
                     return "/shows/\(id)/episodes"
                 case .getCast(let id):
                     return "/shows/\(id)/cast"
+                case .getShowById(let id):
+                    return "/shows/\(id)"
             }
         }
         
         public var method: String {
             switch self {
-                case .getShows, .getShowsByName, .getEpisodes, .getCast:
+                case .getShows, .getShowsByName, .getEpisodes, .getCast, .getShowById:
                     return "GET"
             }
         }
@@ -40,7 +43,7 @@ extension DataSource.Show {
                     return [URLQueryItem(name: "page", value: String(page))]
                 case .getShowsByName(let search):
                     return [URLQueryItem(name: "q", value: search)]
-                case .getEpisodes, .getCast:
+                case .getEpisodes, .getCast, .getShowById:
                     return nil
             }
         }

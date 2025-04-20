@@ -87,7 +87,7 @@ extension Presenter.Show.Screens.ListShows {
                 }
                 .navigationDestination(isPresented: $isDetailViewPresented) {
                     if let show = selectedShow {
-                        Presenter.Show.Screens.ListShows.TVShowDetailView(tvShow: show)
+                        Presenter.Show.Screens.ShowDetails.Screen(viewModel: Presenter.Show.Screens.ShowDetails.Factory.makeViewModel(show: show))
                     }
                 }
             }
@@ -102,61 +102,6 @@ extension Presenter.Show.Screens.ListShows {
             }
         }
     }
-    
-    
-    
-    struct TVShowDetailView: View {
-        let tvShow: Domain.Show.Model.Show
-        
-        var body: some View {
-            NavigationStack {
-                ScrollView {
-                    Group {
-                        VStack(alignment: .leading) {
-                            AsyncImage(url: URL(string: tvShow.image.original)) { phase in
-                                switch phase {
-                                    case .empty:
-                                        ProgressView()
-                                    case .success(let image):
-                                        image
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(maxWidth: .infinity)
-                                            .cornerRadius(8)
-                                    case .failure:
-                                        Image(systemName: "photo.fill")
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(maxWidth: .infinity)
-                                            .foregroundColor(.gray)
-                                    @unknown default:
-                                        EmptyView()
-                                }
-                            }
-                            
-                            Text("Description")
-                                .font(.headline)
-                            
-                            Presenter.Helpers.HTMLTextView.makeText(html: tvShow.summary)
-                            
-                            if let genre = tvShow.genres.first {
-                                Text("Genre: \(genre)")
-                                    .font(.subheadline)
-                            }
-                            Text("Release Year: \(String(Calendar.current.component(.year, from: tvShow.getDatePremiered())))")
-                                .font(.subheadline)
-                            
-                            
-                            Spacer()
-                        }
-                        .padding()
-                    }
-                }
-                .navigationTitle(tvShow.name)
-                .navigationBarTitleDisplayMode(.large)
-            }
-        }
-    }
 }
 
 #Preview {
@@ -164,5 +109,3 @@ extension Presenter.Show.Screens.ListShows {
         Presenter.Show.Screens.ListShows.Screen(viewModel: Presenter.Show.Screens.ListShows.Factory.makeViewModel())
     }
 }
-
-

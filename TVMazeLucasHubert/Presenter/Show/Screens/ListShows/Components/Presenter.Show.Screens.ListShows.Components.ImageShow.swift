@@ -12,7 +12,7 @@ extension Presenter.Show.Screens.ListShows.Components {
         var show: Domain.Show.Model.Show
         
         var body: some View {
-            AsyncImage(url: URL(string: "https://m.media-amazon.com/images/I/81arD48HpRL._AC_UF1000,1000_QL80_.jpg")!) { phase in
+            AsyncImage(url: URL(string: show.image.original)!) { phase in
                 if let img = phase.image {
                     img
                         .resizable()

@@ -33,6 +33,10 @@ extension DataSource {
                         return "shows_page_1"
                     case .getShowsByName:
                         return ""
+                    case .getEpisodes:
+                        return "episodes"
+                    case .getCast:
+                        return "cast"
                 }
             }
             return ""

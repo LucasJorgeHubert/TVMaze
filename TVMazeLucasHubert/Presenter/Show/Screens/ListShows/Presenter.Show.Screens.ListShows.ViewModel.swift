@@ -17,19 +17,15 @@ extension Presenter.Show.Screens.ListShows {
         @Published var searchTerm: String = ""
         @Published var pageNumber: Int = 1
         
-        let context: ModelContext
-        
         let getShowUseCase: Domain.Show.UseCase.GetShows
         let getShowBySearchUseCase: Domain.Show.UseCase.GetShowByName
         
         init(
             getShowUseCase: Domain.Show.UseCase.GetShows,
-            getShowBySearchUseCase: Domain.Show.UseCase.GetShowByName,
-            context: ModelContext
+            getShowBySearchUseCase: Domain.Show.UseCase.GetShowByName
         ) {
             self.getShowUseCase = getShowUseCase
             self.getShowBySearchUseCase = getShowBySearchUseCase
-            self.context = context
         }
         
         @MainActor
@@ -61,13 +57,13 @@ extension Presenter.Show.Screens.ListShows {
             }
         }
         
-        func addToFavorite(_ show: Domain.Show.Model.Show) throws {
+        func addToFavorite(_ show: Domain.Show.Model.Show, context: ModelContext) throws {
             let favorite = Domain.Favorite.Model.FavoriteItem.from(show)
             context.insert(favorite)
             try context.save()
         }
         
-        func removeFromFavorite(_ show: Domain.Show.Model.Show) throws {
+        func removeFromFavorite(_ show: Domain.Show.Model.Show, context: ModelContext) throws {
             let descriptor = FetchDescriptor<Domain.Favorite.Model.FavoriteItem>(predicate: #Predicate { $0.id == show.id })
             if let favorite = try? context.fetch(descriptor).first {
                 context.delete(favorite)

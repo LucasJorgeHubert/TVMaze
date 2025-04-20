@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 extension Presenter.Show.TabBar {
     struct Screen: View {
@@ -13,13 +14,15 @@ extension Presenter.Show.TabBar {
         
         var body: some View {
             TabView {
-                Presenter.Show.Screens.ListShows.Screen(viewModel: Presenter.Show.Screens.ListShows.DI().makeViewModel(context: context))
+                Presenter.Show.Screens.ListShows.Screen(viewModel: Presenter.Show.Screens.ListShows.Factory.makeViewModel())
                 .tabItem { Image(systemName: "list.dash") }
                 
                 GroupBox {
                     Text("Favorites")
                 }
                 .tabItem { Image(systemName: "star") }
+            }
+            .onAppear {
             }
         }
     }

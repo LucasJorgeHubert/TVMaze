@@ -70,6 +70,11 @@ extension Presenter.Show.Screens.ListShows {
                 .navigationBarTitleDisplayMode(.automatic)
                 .toolbar {
                     ToolbarItem {
+                        if viewModel.isLoading {
+                            ProgressView()
+                        }
+                    }
+                    ToolbarItem {
                         Button {
                             //
                         } label: {

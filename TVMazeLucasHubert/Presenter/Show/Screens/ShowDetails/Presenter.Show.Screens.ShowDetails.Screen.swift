@@ -37,9 +37,11 @@ extension Presenter.Show.Screens.ShowDetails {
                             }
                         }
                         
-                        GroupBox(label: Label("Summary", systemImage: "info.circle")) {
-                            Presenter.Helpers.HTMLTextView.makeText(html: viewModel.show.summary)
-                                .padding(.top, 8)
+                        if let summary = viewModel.show.summary {
+                            GroupBox(label: Label("Summary", systemImage: "info.circle")) {
+                                Presenter.Helpers.HTMLTextView.makeText(html: summary)
+                                    .padding(.top, 8)
+                            }
                         }
                         
                         Text("Release Year: \(String(Calendar.current.component(.year, from: viewModel.show.getDatePremiered())))")

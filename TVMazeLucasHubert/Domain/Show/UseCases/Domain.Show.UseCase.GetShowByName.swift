@@ -16,7 +16,9 @@ extension Domain.Show.UseCase {
         }
         
         public func execute(search: String) async throws -> [Domain.Show.Model.Show] {
-            return try await repository.getShowsByName(search: search)
+            let shows = try await repository.getShowsByName(search: search)
+            let filteredShows: [Domain.Show.Model.Show] = shows.map { $0.show }
+            return filteredShows
         }
     }
 }

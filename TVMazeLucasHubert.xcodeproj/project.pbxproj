@@ -50,6 +50,8 @@
 		69CE73972DB576480002F0D4 /* Domain.Show.UseCase.getShowById.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE73962DB576480002F0D4 /* Domain.Show.UseCase.getShowById.swift */; };
 		69CE73992DB59AED0002F0D4 /* Show.json in Resources */ = {isa = PBXBuildFile; fileRef = 69CE73982DB59AED0002F0D4 /* Show.json */; };
 		69CE739B2DB59BBD0002F0D4 /* Presenter.Show.Screen.Favorites.Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE739A2DB59BBD0002F0D4 /* Presenter.Show.Screen.Favorites.Factory.swift */; };
+		69CE739D2DB5A7B50002F0D4 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = 69CE739C2DB5A7B50002F0D4 /* search.json */; };
+		69CE739F2DB5A9380002F0D4 /* Domain.Show.Model.ShowSearched.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE739E2DB5A9380002F0D4 /* Domain.Show.Model.ShowSearched.swift */; };
 		69F03FAB2DB40D94009AF169 /* Presenter.Show.Screens.ListShows.Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F03FAA2DB40D94009AF169 /* Presenter.Show.Screens.ListShows.Factory.swift */; };
 		69F03FB02DB43671009AF169 /* Presenter.TabBar.Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F03FAF2DB43671009AF169 /* Presenter.TabBar.Screen.swift */; };
 		69F03FB32DB49360009AF169 /* Presenter.Show.Screens.ShowDetails.Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F03FB22DB49360009AF169 /* Presenter.Show.Screens.ShowDetails.Screen.swift */; };
@@ -122,6 +124,8 @@
 		69CE73962DB576480002F0D4 /* Domain.Show.UseCase.getShowById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.UseCase.getShowById.swift; sourceTree = "<group>"; };
 		69CE73982DB59AED0002F0D4 /* Show.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Show.json; sourceTree = "<group>"; };
 		69CE739A2DB59BBD0002F0D4 /* Presenter.Show.Screen.Favorites.Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screen.Favorites.Factory.swift; sourceTree = "<group>"; };
+		69CE739C2DB5A7B50002F0D4 /* search.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
+		69CE739E2DB5A9380002F0D4 /* Domain.Show.Model.ShowSearched.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.Model.ShowSearched.swift; sourceTree = "<group>"; };
 		69F03FAA2DB40D94009AF169 /* Presenter.Show.Screens.ListShows.Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ListShows.Factory.swift; sourceTree = "<group>"; };
 		69F03FAF2DB43671009AF169 /* Presenter.TabBar.Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.TabBar.Screen.swift; sourceTree = "<group>"; };
 		69F03FB22DB49360009AF169 /* Presenter.Show.Screens.ShowDetails.Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ShowDetails.Screen.swift; sourceTree = "<group>"; };
@@ -265,6 +269,7 @@
 				69175A7C2DB19D950087C8E5 /* Domain.Show.Model.Show.swift */,
 				695E27A22DB305EC0082DFDA /* Domain.Show.Model.Cast.swift */,
 				695E279C2DB303220082DFDA /* Domain.Show.Model.Episode.swift */,
+				69CE739E2DB5A9380002F0D4 /* Domain.Show.Model.ShowSearched.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 			children = (
 				69175AB02DB20FB20087C8E5 /* DataSource.DispatcherMock.swift */,
 				69175AB22DB2100E0087C8E5 /* shows_page_1.json */,
+				69CE739C2DB5A7B50002F0D4 /* search.json */,
 				695E279E2DB304570082DFDA /* episodes.json */,
 				695E27A02DB305C90082DFDA /* cast.json */,
 				69CE73982DB59AED0002F0D4 /* Show.json */,
@@ -525,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69175A552DB191AF0087C8E5 /* Preview Assets.xcassets in Resources */,
+				69CE739D2DB5A7B50002F0D4 /* search.json in Resources */,
 				69175AB32DB2100E0087C8E5 /* shows_page_1.json in Resources */,
 				695E279F2DB304570082DFDA /* episodes.json in Resources */,
 				69175A522DB191AF0087C8E5 /* Assets.xcassets in Resources */,
@@ -585,6 +592,7 @@
 				69F03FB52DB49432009AF169 /* Presenter.Show.Screens.ShowDetails.ViewModel.swift in Sources */,
 				69175A8E2DB1A1070087C8E5 /* DataSource.Dispatcher.swift in Sources */,
 				69F03FB32DB49360009AF169 /* Presenter.Show.Screens.ShowDetails.Screen.swift in Sources */,
+				69CE739F2DB5A9380002F0D4 /* Domain.Show.Model.ShowSearched.swift in Sources */,
 				69175AB12DB20FB20087C8E5 /* DataSource.DispatcherMock.swift in Sources */,
 				69175AA92DB1F52B0087C8E5 /* Presenter.Show.Screens.ListShows.Screen.swift in Sources */,
 				695E27902DB2EC9F0082DFDA /* Presenter.Show.Screens.ListShows.Components.FavoriteAndRating.swift in Sources */,

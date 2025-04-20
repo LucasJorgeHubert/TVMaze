@@ -23,7 +23,7 @@ extension Domain.Show.Model {
         let network: Network?
         let externals: Externals
         let image: ShowImage
-        let summary: String
+        let summary: String?
         let updated: Int
         let links: ShowLinks?
         

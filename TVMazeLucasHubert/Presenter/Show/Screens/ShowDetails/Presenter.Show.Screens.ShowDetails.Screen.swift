@@ -10,26 +10,38 @@ import SwiftUI
 extension Presenter.Show.Screens.ShowDetails {
     struct Screen: View {
         @ObservedObject var viewModel: ViewModel
-        @State var isExpanded: Set<Int> = []
+        @State var isExpanded: Set<Int> = [1]
+        
         var body: some View {
             NavigationStack {
+                
                 VStack {
                     List {
                         ForEach(viewModel.episodes.keys.sorted(), id: \.self) { season in
-                            Section {
+                            Section(isExpanded: Binding<Bool>(
+                                get: {
+                                    isExpanded.contains(season)
+                                },
+                                set: { newValue in
+                                    if newValue {
+                                        isExpanded.insert(season)
+                                    } else {
+                                        isExpanded.remove(season)
+                                    }
+                                }
+                            )) {
                                 ForEach(viewModel.episodes[season] ?? [], id: \.self) { episode in
-                                    Text("\(episode.name)")
+                                    Text("\(episode.number) - \(episode.name)")
                                 }
                             } header: {
-                                Text("season \(season)")
+                                Text("Season \(season)")
                             }
 
-
                         }
-                        .listStyle(.sidebar)
                     }
+                    .listStyle(.sidebar)
+                    
                 }
-                
                 .navigationTitle(viewModel.show.name)
                 .navigationBarTitleDisplayMode(.large)
                 .toolbar(.hidden, for: .tabBar)

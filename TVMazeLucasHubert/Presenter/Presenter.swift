@@ -15,7 +15,12 @@ public enum Presenter {
                 public enum Components { }
             }
             public enum Favorites { }
-            public enum ShowDetails { }
+            public enum ShowDetails {
+                public enum SubViews {
+                    public enum ListEpisodes { }
+                    public enum EpisodeDetails { }
+                }
+            }
         }
     }
     public enum Pin {

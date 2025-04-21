@@ -138,7 +138,7 @@ extension Presenter.Show.Screens.ShowDetails {
                     .padding()
                 }
                 .sheet(isPresented: $showSheet) {
-                    ListEpisodes(episodes: viewModel.episodes)
+                    Presenter.Show.Screens.ShowDetails.SubViews.ListEpisodes.Screen(episodes: viewModel.episodes)
                 }
                 .navigationTitle(viewModel.show.name)
                 .navigationBarTitleDisplayMode(.large)
@@ -146,117 +146,4 @@ extension Presenter.Show.Screens.ShowDetails {
             }
         }
     }
-    
-    struct ListEpisodes: View {
-        @State var isExpanded: Set<Int> = [1]
-        var episodes: [Int : [Domain.Show.Model.Episode]]
-        
-        @Environment(\.dismiss) var dismiss
-        
-        var body: some View {
-            NavigationStack {
-                VStack {
-                    List {
-                        ForEach(episodes.keys.sorted(), id: \.self) { season in
-                            Section(isExpanded: Binding<Bool>(
-                                get: {
-                                    isExpanded.contains(season)
-                                },
-                                set: { newValue in
-                                    if newValue {
-                                        isExpanded.insert(season)
-                                    } else {
-                                        isExpanded.remove(season)
-                                    }
-                                }
-                            )) {
-                                ForEach(episodes[season] ?? [], id: \.self) { episode in
-                                    NavigationLink {
-                                        EpisodeDetails(episode: episode)
-                                    } label: {
-                                        Text("\(episode.number) - \(episode.name)")
-                                    }
-                                }
-                            } header: {
-                                Text("Season \(season)")
-                            }
-                            
-                        }
-                    }
-                    .listStyle(.sidebar)
-                }
-                .navigationTitle("Episodes")
-                .toolbar {
-                    ToolbarItem {
-                        Button {
-                            dismiss()
-                        } label: {
-                            Text("Close")
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    struct EpisodeDetails: View {
-        var episode: Domain.Show.Model.Episode
-        
-        var body: some View {
-            NavigationStack{
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 16) {
-                        AsyncImage(url: URL(string: episode.image.medium)) { phase in
-                            switch phase {
-                                case .empty:
-                                    ProgressView()
-                                case .success(let image):
-                                    image
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(maxWidth: .infinity)
-                                        .cornerRadius(8)
-                                case .failure:
-                                    Image(systemName: "photo.fill")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(maxWidth: .infinity)
-                                        .foregroundColor(.gray)
-                                @unknown default:
-                                    EmptyView()
-                            }
-                        }
-                        
-                        VStack(alignment: .leading, spacing: 8) {
-                            Text("Episode: \(episode.number)")
-                                .font(.headline)
-                            
-                            Text("Season: \(episode.season)")
-                                .font(.subheadline)
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        
-                        if let airdate = episode.getAirdate() {
-                            Text("Air date: \(String(Calendar.current.component(.month, from: airdate)))/\(String(Calendar.current.component(.year, from: airdate)))")
-                                .font(.subheadline)
-                        }
-                        
-                        Text("Summary")
-                            .font(.headline)
-                        
-                        Presenter.Helpers.HTMLTextView.makeText(html: episode.summary)
-                    }
-                }
-                .padding()
-                .navigationTitle(episode.name)
-                .navigationBarTitleDisplayMode(.large)
-            }
-        }
-    }
 }
-
-
-
-                    
-
-

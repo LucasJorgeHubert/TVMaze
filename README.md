@@ -36,3 +36,5 @@ Just clone the repository and run the code.
 Enum Case-less Pattern
 -
 Using this pattern to get a more organized code
+
+<img width="1338" alt="image" src="https://github.com/user-attachments/assets/dc719ef3-1d3c-4dde-9192-b5344f68f7bf" />

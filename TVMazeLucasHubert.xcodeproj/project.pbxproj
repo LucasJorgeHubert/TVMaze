@@ -47,6 +47,16 @@
 		695E27A32DB305EC0082DFDA /* Domain.Show.Model.Cast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27A22DB305EC0082DFDA /* Domain.Show.Model.Cast.swift */; };
 		695E27A52DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27A42DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift */; };
 		695E27A82DB318D90082DFDA /* Presenter.Helper.HTMLText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695E27A72DB318D90082DFDA /* Presenter.Helper.HTMLText.swift */; };
+		69CE73972DB576480002F0D4 /* Domain.Show.UseCase.getShowById.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE73962DB576480002F0D4 /* Domain.Show.UseCase.getShowById.swift */; };
+		69CE73992DB59AED0002F0D4 /* Show.json in Resources */ = {isa = PBXBuildFile; fileRef = 69CE73982DB59AED0002F0D4 /* Show.json */; };
+		69CE739B2DB59BBD0002F0D4 /* Presenter.Show.Screen.Favorites.Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE739A2DB59BBD0002F0D4 /* Presenter.Show.Screen.Favorites.Factory.swift */; };
+		69CE739D2DB5A7B50002F0D4 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = 69CE739C2DB5A7B50002F0D4 /* search.json */; };
+		69CE739F2DB5A9380002F0D4 /* Domain.Show.Model.ShowSearched.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE739E2DB5A9380002F0D4 /* Domain.Show.Model.ShowSearched.swift */; };
+		69CE73A22DB5B09C0002F0D4 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE73A12DB5B09C0002F0D4 /* KeychainService.swift */; };
+		69CE73A52DB5B0F60002F0D4 /* Presenter.Pin.Create.Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE73A42DB5B0F60002F0D4 /* Presenter.Pin.Create.Screen.swift */; };
+		69CE73A72DB5B1A10002F0D4 /* Presenter.Pin.Login.Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE73A62DB5B1A10002F0D4 /* Presenter.Pin.Login.Screen.swift */; };
+		69CE73AA2DB5D0D60002F0D4 /* Presenter.Show.Screens.ShowDetails.SubViews.EpisodeDetails.Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE73A92DB5D0D60002F0D4 /* Presenter.Show.Screens.ShowDetails.SubViews.EpisodeDetails.Screen.swift */; };
+		69CE73AC2DB5D1AD0002F0D4 /* Presenter.Show.Screens.ShowDetails.SubViews.Listepisodes.Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CE73AB2DB5D1AD0002F0D4 /* Presenter.Show.Screens.ShowDetails.SubViews.Listepisodes.Screen.swift */; };
 		69F03FAB2DB40D94009AF169 /* Presenter.Show.Screens.ListShows.Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F03FAA2DB40D94009AF169 /* Presenter.Show.Screens.ListShows.Factory.swift */; };
 		69F03FB02DB43671009AF169 /* Presenter.TabBar.Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F03FAF2DB43671009AF169 /* Presenter.TabBar.Screen.swift */; };
 		69F03FB32DB49360009AF169 /* Presenter.Show.Screens.ShowDetails.Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F03FB22DB49360009AF169 /* Presenter.Show.Screens.ShowDetails.Screen.swift */; };
@@ -116,6 +126,16 @@
 		695E27A22DB305EC0082DFDA /* Domain.Show.Model.Cast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.Model.Cast.swift; sourceTree = "<group>"; };
 		695E27A42DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.UseCase.GetCast.swift; sourceTree = "<group>"; };
 		695E27A72DB318D90082DFDA /* Presenter.Helper.HTMLText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Helper.HTMLText.swift; sourceTree = "<group>"; };
+		69CE73962DB576480002F0D4 /* Domain.Show.UseCase.getShowById.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.UseCase.getShowById.swift; sourceTree = "<group>"; };
+		69CE73982DB59AED0002F0D4 /* Show.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Show.json; sourceTree = "<group>"; };
+		69CE739A2DB59BBD0002F0D4 /* Presenter.Show.Screen.Favorites.Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screen.Favorites.Factory.swift; sourceTree = "<group>"; };
+		69CE739C2DB5A7B50002F0D4 /* search.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
+		69CE739E2DB5A9380002F0D4 /* Domain.Show.Model.ShowSearched.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.Show.Model.ShowSearched.swift; sourceTree = "<group>"; };
+		69CE73A12DB5B09C0002F0D4 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		69CE73A42DB5B0F60002F0D4 /* Presenter.Pin.Create.Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Pin.Create.Screen.swift; sourceTree = "<group>"; };
+		69CE73A62DB5B1A10002F0D4 /* Presenter.Pin.Login.Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Pin.Login.Screen.swift; sourceTree = "<group>"; };
+		69CE73A92DB5D0D60002F0D4 /* Presenter.Show.Screens.ShowDetails.SubViews.EpisodeDetails.Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ShowDetails.SubViews.EpisodeDetails.Screen.swift; sourceTree = "<group>"; };
+		69CE73AB2DB5D1AD0002F0D4 /* Presenter.Show.Screens.ShowDetails.SubViews.Listepisodes.Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ShowDetails.SubViews.Listepisodes.Screen.swift; sourceTree = "<group>"; };
 		69F03FAA2DB40D94009AF169 /* Presenter.Show.Screens.ListShows.Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ListShows.Factory.swift; sourceTree = "<group>"; };
 		69F03FAF2DB43671009AF169 /* Presenter.TabBar.Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.TabBar.Screen.swift; sourceTree = "<group>"; };
 		69F03FB22DB49360009AF169 /* Presenter.Show.Screens.ShowDetails.Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.Show.Screens.ShowDetails.Screen.swift; sourceTree = "<group>"; };
@@ -171,6 +191,7 @@
 		69175A4A2DB191AD0087C8E5 /* TVMazeLucasHubert */ = {
 			isa = PBXGroup;
 			children = (
+				69CE73A02DB5B0820002F0D4 /* Keychain */,
 				69175AA22DB1F4560087C8E5 /* Tools */,
 				69175A942DB1A2F00087C8E5 /* Info.plist */,
 				69175A8F2DB1A1F20087C8E5 /* Configurations */,
@@ -237,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				69175A9B2DB1F0880087C8E5 /* Presenter.swift */,
+				69CE73A32DB5B0BF0002F0D4 /* Pin */,
 				695E27A62DB318C10082DFDA /* Helpers */,
 				69175AA52DB1F4CE0087C8E5 /* Show */,
 			);
@@ -259,6 +281,7 @@
 				69175A7C2DB19D950087C8E5 /* Domain.Show.Model.Show.swift */,
 				695E27A22DB305EC0082DFDA /* Domain.Show.Model.Cast.swift */,
 				695E279C2DB303220082DFDA /* Domain.Show.Model.Episode.swift */,
+				69CE739E2DB5A9380002F0D4 /* Domain.Show.Model.ShowSearched.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -304,6 +327,7 @@
 				69175A992DB1EF4E0087C8E5 /* Domain.Show.UseCase.GetShowByName.swift */,
 				695E279A2DB302E60082DFDA /* Domain.Show.UseCase.GetEpisodes.swift */,
 				695E27A42DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift */,
+				69CE73962DB576480002F0D4 /* Domain.Show.UseCase.getShowById.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -351,8 +375,10 @@
 			children = (
 				69175AB02DB20FB20087C8E5 /* DataSource.DispatcherMock.swift */,
 				69175AB22DB2100E0087C8E5 /* shows_page_1.json */,
+				69CE739C2DB5A7B50002F0D4 /* search.json */,
 				695E279E2DB304570082DFDA /* episodes.json */,
 				695E27A02DB305C90082DFDA /* cast.json */,
+				69CE73982DB59AED0002F0D4 /* Show.json */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -370,6 +396,7 @@
 			children = (
 				695E27862DB2B3450082DFDA /* Presenter.Show.Screen.Favorites.ViewModel.swift */,
 				695E27882DB2D5520082DFDA /* Presenter.Show.Screen.Favorites.Screen.swift */,
+				69CE739A2DB59BBD0002F0D4 /* Presenter.Show.Screen.Favorites.Factory.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -393,6 +420,32 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		69CE73A02DB5B0820002F0D4 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				69CE73A12DB5B09C0002F0D4 /* KeychainService.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		69CE73A32DB5B0BF0002F0D4 /* Pin */ = {
+			isa = PBXGroup;
+			children = (
+				69CE73A42DB5B0F60002F0D4 /* Presenter.Pin.Create.Screen.swift */,
+				69CE73A62DB5B1A10002F0D4 /* Presenter.Pin.Login.Screen.swift */,
+			);
+			path = Pin;
+			sourceTree = "<group>";
+		};
+		69CE73A82DB5D0400002F0D4 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				69CE73A92DB5D0D60002F0D4 /* Presenter.Show.Screens.ShowDetails.SubViews.EpisodeDetails.Screen.swift */,
+				69CE73AB2DB5D1AD0002F0D4 /* Presenter.Show.Screens.ShowDetails.SubViews.Listepisodes.Screen.swift */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
 		69F03FAE2DB43671009AF169 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +457,7 @@
 		69F03FB12DB492BF009AF169 /* ShowDetails */ = {
 			isa = PBXGroup;
 			children = (
+				69CE73A82DB5D0400002F0D4 /* SubViews */,
 				69F03FB22DB49360009AF169 /* Presenter.Show.Screens.ShowDetails.Screen.swift */,
 				69F03FB42DB49432009AF169 /* Presenter.Show.Screens.ShowDetails.ViewModel.swift */,
 				69F03FB62DB4943E009AF169 /* Presenter.Show.Screens.ShowDetails.Factory.swift */,
@@ -516,11 +570,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				69175A552DB191AF0087C8E5 /* Preview Assets.xcassets in Resources */,
+				69CE739D2DB5A7B50002F0D4 /* search.json in Resources */,
 				69175AB32DB2100E0087C8E5 /* shows_page_1.json in Resources */,
 				695E279F2DB304570082DFDA /* episodes.json in Resources */,
 				69175A522DB191AF0087C8E5 /* Assets.xcassets in Resources */,
 				695E27A12DB305C90082DFDA /* cast.json in Resources */,
 				69175A912DB1A2080087C8E5 /* Debug.xcconfig in Resources */,
+				69CE73992DB59AED0002F0D4 /* Show.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +603,7 @@
 			files = (
 				69F03FB02DB43671009AF169 /* Presenter.TabBar.Screen.swift in Sources */,
 				695E27A32DB305EC0082DFDA /* Domain.Show.Model.Cast.swift in Sources */,
+				69CE73A72DB5B1A10002F0D4 /* Presenter.Pin.Login.Screen.swift in Sources */,
 				69175A8C2DB1A0B50087C8E5 /* DataSource.Protocol.APIRouter.swift in Sources */,
 				69175AA42DB1F4700087C8E5 /* Preview.extension.swift in Sources */,
 				69175A812DB19F390087C8E5 /* DataSource.swift in Sources */,
@@ -555,11 +612,15 @@
 				69F03FAB2DB40D94009AF169 /* Presenter.Show.Screens.ListShows.Factory.swift in Sources */,
 				69175A832DB19F800087C8E5 /* DataSource.Show.APIRouter.swift in Sources */,
 				69175A962DB1EF260087C8E5 /* Domain.Show.UseCase.GetShows.swift in Sources */,
+				69CE73AC2DB5D1AD0002F0D4 /* Presenter.Show.Screens.ShowDetails.SubViews.Listepisodes.Screen.swift in Sources */,
+				69CE73972DB576480002F0D4 /* Domain.Show.UseCase.getShowById.swift in Sources */,
 				695E279B2DB302E60082DFDA /* Domain.Show.UseCase.GetEpisodes.swift in Sources */,
 				695E27A52DB312EF0082DFDA /* Domain.Show.UseCase.GetCast.swift in Sources */,
+				69CE73A22DB5B09C0002F0D4 /* KeychainService.swift in Sources */,
 				695E27922DB2ED450082DFDA /* Presenter.Show.Screens.ListShows.Components.Genres.swift in Sources */,
 				695E27A82DB318D90082DFDA /* Presenter.Helper.HTMLText.swift in Sources */,
 				695E278E2DB2EC740082DFDA /* Presenter.Show.Screens.ListShows.Components.ShowDetails.swift in Sources */,
+				69CE739B2DB59BBD0002F0D4 /* Presenter.Show.Screen.Favorites.Factory.swift in Sources */,
 				69175A7D2DB19D950087C8E5 /* Domain.Show.Model.Show.swift in Sources */,
 				69175A882DB19FB60087C8E5 /* Domain.Show.Protocol.Repository.swift in Sources */,
 				69175A7F2DB19DA40087C8E5 /* Domain.swift in Sources */,
@@ -573,13 +634,16 @@
 				69F03FB52DB49432009AF169 /* Presenter.Show.Screens.ShowDetails.ViewModel.swift in Sources */,
 				69175A8E2DB1A1070087C8E5 /* DataSource.Dispatcher.swift in Sources */,
 				69F03FB32DB49360009AF169 /* Presenter.Show.Screens.ShowDetails.Screen.swift in Sources */,
+				69CE739F2DB5A9380002F0D4 /* Domain.Show.Model.ShowSearched.swift in Sources */,
 				69175AB12DB20FB20087C8E5 /* DataSource.DispatcherMock.swift in Sources */,
 				69175AA92DB1F52B0087C8E5 /* Presenter.Show.Screens.ListShows.Screen.swift in Sources */,
 				695E27902DB2EC9F0082DFDA /* Presenter.Show.Screens.ListShows.Components.FavoriteAndRating.swift in Sources */,
 				69175A932DB1A2AC0087C8E5 /* DataSource.Environment.swift in Sources */,
 				695E27832DB2B0840082DFDA /* Domain.Favorites.Model.Favorite.swift in Sources */,
 				69175A9A2DB1EF4E0087C8E5 /* Domain.Show.UseCase.GetShowByName.swift in Sources */,
+				69CE73A52DB5B0F60002F0D4 /* Presenter.Pin.Create.Screen.swift in Sources */,
 				69175A862DB19F9E0087C8E5 /* DataSource.Show.Repository.swift in Sources */,
+				69CE73AA2DB5D0D60002F0D4 /* Presenter.Show.Screens.ShowDetails.SubViews.EpisodeDetails.Screen.swift in Sources */,
 				69175A4C2DB191AD0087C8E5 /* TVMazeLucasHubertApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

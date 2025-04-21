@@ -16,6 +16,8 @@ extension Presenter.Show.Screens.ListShows {
         @Query var favorites: [Domain.Favorite.Model.FavoriteItem]
         @State private var selectedShow: Domain.Show.Model.Show? = nil
         @State private var isDetailViewPresented: Bool = false
+        @State private var isCreatedPinPresented: Bool = false
+        @State private var showConfirmation = false
         
         var body: some View {
             NavigationStack {
@@ -70,11 +72,20 @@ extension Presenter.Show.Screens.ListShows {
                 .navigationBarTitleDisplayMode(.automatic)
                 .toolbar {
                     ToolbarItem {
+                        if viewModel.isLoading {
+                            ProgressView()
+                        }
+                    }
+                    ToolbarItem {
                         Button {
-                            //
+                            if KeychainService.shared.hasSavedPIN() {
+                                showConfirmation = true
+                            } else {
+                                isCreatedPinPresented = true
+                            }
                         } label: {
-                            
-                            Image(systemName: "slider.horizontal.3")
+                            Image(systemName: "key")
+                                .tint(KeychainService.shared.hasSavedPIN() ? .green : .red)
                         }
                     }
                     ToolbarItem {
@@ -85,10 +96,19 @@ extension Presenter.Show.Screens.ListShows {
                         }
                     }
                 }
+                .alert("Are you sure you want to remove your PIN?", isPresented: $showConfirmation) {
+                    Button("Remove", role: .destructive) {
+                        KeychainService.shared.deletePIN()
+                    }
+                    Button("Cancel", role: .cancel) {}
+                }
                 .navigationDestination(isPresented: $isDetailViewPresented) {
                     if let show = selectedShow {
                         Presenter.Show.Screens.ShowDetails.Screen(viewModel: Presenter.Show.Screens.ShowDetails.Factory.makeViewModel(show: show))
                     }
+                }
+                .navigationDestination(isPresented: $isCreatedPinPresented) {
+                    Presenter.Pin.Create.Screen()
                 }
             }
             .onAppear() {

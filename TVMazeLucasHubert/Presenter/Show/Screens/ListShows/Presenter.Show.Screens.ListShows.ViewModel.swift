@@ -8,6 +8,7 @@
 import Foundation
 import SwiftData
 import SwiftUI
+import Combine
 
 extension Presenter.Show.Screens.ListShows {
     class ViewModel: ObservableObject {
@@ -17,8 +18,12 @@ extension Presenter.Show.Screens.ListShows {
         @Published var searchTerm: String = ""
         @Published var pageNumber: Int = 1
         
+        var wasSearched = false
+        
         let getShowUseCase: Domain.Show.UseCase.GetShows
         let getShowBySearchUseCase: Domain.Show.UseCase.GetShowByName
+        
+        private var searchCancellable: Set<AnyCancellable> = []
         
         init(
             getShowUseCase: Domain.Show.UseCase.GetShows,
@@ -26,6 +31,44 @@ extension Presenter.Show.Screens.ListShows {
         ) {
             self.getShowUseCase = getShowUseCase
             self.getShowBySearchUseCase = getShowBySearchUseCase
+            
+            setupSearchDebounce()
+        }
+        
+        private func setupSearchDebounce() {
+            $searchTerm
+                .debounce(for: .milliseconds(500), scheduler: DispatchQueue.main)
+                .removeDuplicates()
+                .sink { [weak self] term in
+                    guard let self = self else { return }
+                    
+                    if term.isEmpty && self.wasSearched {
+                        Task {
+                            self.isLoading = true
+                            do {
+                                self.shows = []
+                                self.pageNumber = 1
+                                try await self.getShows()
+                            } catch {
+                                print(error)
+                            }
+                        }
+                        return
+                    }
+                    if term.isEmpty {
+                        return
+                    }
+                    Task {
+                        self.isLoading = true
+                        do {
+                            try await self.getShowsBySearch(term: term)
+                            self.wasSearched = true
+                        } catch {
+                            print(error)
+                        }
+                    }
+                }
+                .store(in: &searchCancellable)
         }
         
         @MainActor
@@ -36,9 +79,10 @@ extension Presenter.Show.Screens.ListShows {
         }
         
         @MainActor
-        func getShowsBySearch() async throws {
+        func getShowsBySearch(term: String) async throws {
             isLoading = true
-            shows = try await getShowBySearchUseCase.execute(search: searchTerm)
+            let filtered = try await getShowBySearchUseCase.execute(search: term)
+            shows = filtered
             isLoading = false
         }
         

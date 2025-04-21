@@ -11,7 +11,7 @@ import SwiftData
 extension Presenter.Show.Screens.Favorites {
     struct Screen: View {
         @Environment(\.modelContext) private var context
-        @Query var favorites: [Domain.Favorite.Model.FavoriteItem]
+        @Query(sort: \Domain.Favorite.Model.FavoriteItem.name, order: .forward) var favorites: [Domain.Favorite.Model.FavoriteItem]
         @ObservedObject var viewModel: Presenter.Show.Screens.Favorites.ViewModel
         @State private var isPresentingDetails: Bool = false
         @State private var selectedFavoriteID: Int?

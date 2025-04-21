@@ -29,7 +29,7 @@ class KeychainService {
             kSecUseAuthenticationUI as String: kSecUseAuthenticationUIAllow
         ]
         
-        SecItemDelete(query as CFDictionary) // Remove antigo se existir
+        SecItemDelete(query as CFDictionary)
         let status = SecItemAdd(query as CFDictionary, nil)
         return status == errSecSuccess
     }
@@ -40,7 +40,7 @@ class KeychainService {
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrAccount as String: pinKey,
             kSecReturnData as String: true,
-            kSecUseOperationPrompt as String: "Autentique para acessar o PIN",
+            kSecUseOperationPrompt as String: "",
             kSecUseAuthenticationContext as String: context
         ]
         

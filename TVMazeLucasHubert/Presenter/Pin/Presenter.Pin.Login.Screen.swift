@@ -52,7 +52,6 @@ extension Presenter.Pin.Login {
                                     
                                 } else if let error = error {
                                     print("Biometric authentication not available: \(error.localizedDescription)")
-                                    // Handle the case where biometrics cannot be used
                                 }
                             } else {
                                 showError = true

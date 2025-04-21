@@ -68,6 +68,7 @@ extension DataSource {
                 } catch {
                     lastError = error
                     currentAttempt += 1
+                    print(error)
                     
                     if currentAttempt >= maxRetries {
                         throw lastError ?? TVMazeAPIRequestError.unknown

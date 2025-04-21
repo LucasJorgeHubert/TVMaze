@@ -11,7 +11,7 @@ extension Presenter.Show.Screens.Favorites {
     struct Factory {
         @MainActor
         static func makeViewModel() -> Presenter.Show.Screens.Favorites.ViewModel {
-            let dispather = DataSource.DispatcherMock()
+            let dispather = DataSource.Dispatcher()
             let repository = DataSource.Show.Repository(dispatcher: dispather)
             let getShowByIdUseCase = Domain.Favorite.UseCase.GetShowById(repository: repository)
             

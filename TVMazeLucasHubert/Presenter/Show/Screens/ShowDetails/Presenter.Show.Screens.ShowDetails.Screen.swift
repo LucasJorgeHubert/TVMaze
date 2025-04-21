@@ -9,13 +9,13 @@ import SwiftUI
 
 extension Presenter.Show.Screens.ShowDetails {
     struct Screen: View {
-        @ObservedObject var viewModel: ViewModel
+        @ObservedObject var viewModel: Presenter.Show.Screens.ShowDetails.ViewModel
         @State var showSheet: Bool = false
         
         var body: some View {
             NavigationStack {
                 ScrollView {
-                    VStack(alignment: .leading) {
+                    LazyVStack(alignment: .leading) {
                         AsyncImage(url: URL(string: viewModel.show.image.medium)) { phase in
                             switch phase {
                                 case .empty:
@@ -42,21 +42,23 @@ extension Presenter.Show.Screens.ShowDetails {
                                 Presenter.Helpers.HTMLTextView.makeText(html: summary)
                                     .padding(.top, 8)
                             }
+                        } else {
+                            GroupBox(label: Label("Summary", systemImage: "info.circle")) {
+                                Text("No summary available")
+                                    .padding(.top, 8)
+                            }
                         }
-                        
                          
-                            ScrollView(.horizontal) {
-                                HStack(spacing: 8) {
-                                    ForEach(viewModel.show.schedule.days, id: \.self) { day in
-                                        GroupBox {
-                                            Text(day)
-                                                .font(.subheadline)
-                                        }
+                        ScrollView(.horizontal) {
+                            HStack(spacing: 8) {
+                                ForEach(viewModel.show.schedule.days, id: \.self) { day in
+                                    GroupBox {
+                                        Text(day)
+                                            .font(.subheadline)
                                     }
                                 }
                             }
-                        
-                        
+                        }
                         
                         Text("Release Year: \(String(Calendar.current.component(.year, from: viewModel.show.getDatePremiered())))")
                             .font(.subheadline)
@@ -96,33 +98,35 @@ extension Presenter.Show.Screens.ShowDetails {
                                 HStack {
                                     ForEach(viewModel.cast, id: \.id) { cast in
                                         GroupBox{
-                                            VStack {
-                                                if let image = cast.person.image {
-                                                    AsyncImage(url: URL(string: image.medium)) { phase in
-                                                        switch phase {
-                                                            case .empty:
-                                                                ProgressView()
-                                                            case .success(let image):
-                                                                image
-                                                                    .resizable()
-                                                                    .scaledToFit()
-                                                                    .frame(maxWidth: 150, maxHeight: 150)
-                                                                    .cornerRadius(8)
-                                                            case .failure:
-                                                                Image(systemName: "photo.fill")
-                                                                    .resizable()
-                                                                    .scaledToFit()
-                                                                    .frame(maxWidth: .infinity)
-                                                                    .foregroundColor(.gray)
-                                                            @unknown default:
-                                                                EmptyView()
+                                            if let person = cast.person {
+                                                VStack {
+                                                    if let image = person.image {
+                                                        AsyncImage(url: URL(string: image.medium)) { phase in
+                                                            switch phase {
+                                                                case .empty:
+                                                                    ProgressView()
+                                                                case .success(let image):
+                                                                    image
+                                                                        .resizable()
+                                                                        .scaledToFit()
+                                                                        .frame(maxWidth: 150, maxHeight: 150)
+                                                                        .cornerRadius(8)
+                                                                case .failure:
+                                                                    Image(systemName: "photo.fill")
+                                                                        .resizable()
+                                                                        .scaledToFit()
+                                                                        .frame(maxWidth: .infinity)
+                                                                        .foregroundColor(.gray)
+                                                                @unknown default:
+                                                                    EmptyView()
+                                                            }
                                                         }
                                                     }
+                                                    
+                                                    Text(person.name)
+                                                        .font(.subheadline)
+                                                        .frame(maxWidth: .infinity, alignment: .leading)
                                                 }
-                                                
-                                                Text(cast.person.name)
-                                                    .font(.subheadline)
-                                                    .frame(maxWidth: .infinity, alignment: .leading)
                                             }
                                         }
                                     }

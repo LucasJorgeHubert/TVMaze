@@ -18,5 +18,9 @@ public enum Presenter {
             public enum ShowDetails { }
         }
     }
+    public enum Pin {
+        public enum Create { }
+        public enum Login { }
+    }
     public enum Helpers { }
 }
